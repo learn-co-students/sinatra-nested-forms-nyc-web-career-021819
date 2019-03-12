@@ -1,19 +1,19 @@
 class Ship
   attr_accessor :name, :type, :booty
 
-  SHIP = []
+  @@SHIP= []
   def initialize(params)
     @name = params[:name]
     @type = params[:type]
     @booty = params[:booty]
-    SHIP << self
+    @@SHIP << self
   end
 
   def self.all
-    SHIP
+    @@SHIP
   end
 
   def self.clear
-    SHIP.delete(@name)
+    @@SHIP = []
   end
 end
